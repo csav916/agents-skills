@@ -1,0 +1,283 @@
+{
+  "professional": {
+    "contractions": true,
+    "contraction_rate": 0.4,
+    "sentence_variety": true,
+    "casual_transitions": false,
+    "rhetorical_questions": false,
+    "personality_words": [
+      "recommend",
+      "suggest",
+      "consider",
+      "demonstrate",
+      "indicate",
+      "reveal",
+      "confirm"
+    ],
+    "opening_phrases": [
+      "This approach",
+      "Our analysis shows",
+      "Research indicates",
+      "Evidence suggests",
+      "Results demonstrate"
+    ],
+    "transition_style": "formal",
+    "preferred_transitions": {
+      "addition": ["Additionally", "In addition", "Also", "Further"],
+      "contrast": ["However", "Nevertheless", "Yet", "Conversely"],
+      "cause": ["Therefore", "As a result", "Consequently", "Thus"],
+      "example": ["For example", "For instance", "Consider", "Such as"]
+    },
+    "avoid_patterns": [
+      "gonna",
+      "wanna",
+      "kinda",
+      "sorta",
+      "yeah"
+    ],
+    "formality_base": 7
+  },
+  
+  "casual": {
+    "contractions": true,
+    "contraction_rate": 0.8,
+    "sentence_variety": true,
+    "casual_transitions": true,
+    "rhetorical_questions": true,
+    "personality_words": [
+      "really",
+      "pretty",
+      "quite",
+      "actually",
+      "honestly",
+      "basically",
+      "totally"
+    ],
+    "opening_phrases": [
+      "Here's the thing:",
+      "Look,",
+      "So,",
+      "Here's what happens:",
+      "Let me explain:",
+      "Honestly,"
+    ],
+    "transition_style": "casual",
+    "preferred_transitions": {
+      "addition": ["Also", "Plus", "And", "On top of that"],
+      "contrast": ["But", "Though", "Still", "That said"],
+      "cause": ["So", "That's why", "Because of this"],
+      "example": ["Like", "For example", "Say", "Take"]
+    },
+    "allow_fragments": true,
+    "formality_base": 3
+  },
+  
+  "conversational": {
+    "contractions": true,
+    "contraction_rate": 0.7,
+    "sentence_variety": true,
+    "casual_transitions": true,
+    "rhetorical_questions": true,
+    "personality_words": [
+      "you'll see",
+      "you might wonder",
+      "let's look at",
+      "imagine",
+      "think about",
+      "picture this"
+    ],
+    "opening_phrases": [
+      "You know what?",
+      "Here's what's interesting:",
+      "Let me ask you something:",
+      "Think about it:",
+      "Here's the deal:",
+      "Want to know the best part?"
+    ],
+    "transition_style": "conversational",
+    "preferred_transitions": {
+      "addition": ["Plus", "And", "Also", "What's more"],
+      "contrast": ["But", "Yet", "However", "On the other hand"],
+      "cause": ["So", "That's why", "As a result"],
+      "example": ["Like", "For instance", "Say", "Imagine"]
+    },
+    "direct_address": true,
+    "use_second_person": true,
+    "allow_fragments": true,
+    "formality_base": 4
+  },
+  
+  "storytelling": {
+    "contractions": true,
+    "contraction_rate": 0.6,
+    "sentence_variety": true,
+    "casual_transitions": true,
+    "rhetorical_questions": true,
+    "personality_words": [
+      "suddenly",
+      "meanwhile",
+      "eventually",
+      "surprisingly",
+      "remarkably",
+      "interestingly"
+    ],
+    "opening_phrases": [
+      "It started when",
+      "Picture this:",
+      "Here's how it happened:",
+      "The story begins",
+      "Let me take you back:",
+      "Imagine"
+    ],
+    "transition_style": "narrative",
+    "preferred_transitions": {
+      "addition": ["And then", "Plus", "What's more"],
+      "contrast": ["But", "Yet", "However", "Surprisingly"],
+      "cause": ["So", "As a result", "That's when"],
+      "example": ["Like when", "For instance", "Such as", "Take"]
+    },
+    "narrative_flow": true,
+    "temporal_markers": ["first", "then", "next", "after that", "finally", "eventually"],
+    "allow_fragments": true,
+    "formality_base": 4
+  },
+  
+  "technical-friendly": {
+    "contractions": true,
+    "contraction_rate": 0.5,
+    "sentence_variety": true,
+    "casual_transitions": false,
+    "rhetorical_questions": true,
+    "personality_words": [
+      "essentially",
+      "basically",
+      "simply put",
+      "in other words",
+      "to clarify",
+      "specifically"
+    ],
+    "opening_phrases": [
+      "Let's break this down:",
+      "Here's how it works:",
+      "In simple terms:",
+      "To put it another way:",
+      "The key point is:",
+      "Essentially,"
+    ],
+    "transition_style": "balanced",
+    "preferred_transitions": {
+      "addition": ["Additionally", "Also", "Furthermore", "What's more"],
+      "contrast": ["However", "But", "On the other hand", "Conversely"],
+      "cause": ["Therefore", "So", "As a result", "This means"],
+      "example": ["For example", "Consider", "Like", "Such as"]
+    },
+    "use_analogies": true,
+    "explain_jargon": true,
+    "formality_base": 6
+  },
+  
+  "persuasive": {
+    "contractions": true,
+    "contraction_rate": 0.6,
+    "sentence_variety": true,
+    "casual_transitions": true,
+    "rhetorical_questions": true,
+    "personality_words": [
+      "imagine",
+      "consider",
+      "proven",
+      "guaranteed",
+      "powerful",
+      "effective",
+      "remarkable"
+    ],
+    "opening_phrases": [
+      "Imagine if",
+      "What if you could",
+      "Here's the truth:",
+      "The reality is:",
+      "Think about this:",
+      "Here's what matters:"
+    ],
+    "transition_style": "persuasive",
+    "preferred_transitions": {
+      "addition": ["Moreover", "Plus", "What's more", "On top of that"],
+      "contrast": ["However", "But here's the thing:", "Yet", "Despite this"],
+      "cause": ["That's why", "Therefore", "As a result", "This means"],
+      "example": ["For instance", "Consider", "Take", "Look at"]
+    },
+    "action_oriented": true,
+    "use_power_words": true,
+    "formality_base": 5
+  },
+  
+  "educational": {
+    "contractions": true,
+    "contraction_rate": 0.5,
+    "sentence_variety": true,
+    "casual_transitions": false,
+    "rhetorical_questions": true,
+    "personality_words": [
+      "learn",
+      "understand",
+      "discover",
+      "explore",
+      "recognize",
+      "notice",
+      "observe"
+    ],
+    "opening_phrases": [
+      "Let's explore",
+      "To understand this,",
+      "First, let's look at",
+      "An important concept is",
+      "You'll notice that",
+      "It's helpful to know"
+    ],
+    "transition_style": "instructional",
+    "preferred_transitions": {
+      "addition": ["Next", "Also", "Additionally", "Furthermore"],
+      "contrast": ["However", "On the other hand", "Conversely", "In contrast"],
+      "cause": ["Therefore", "As a result", "This leads to", "Consequently"],
+      "example": ["For example", "Consider", "Let's say", "Imagine"]
+    },
+    "step_by_step": true,
+    "use_examples": true,
+    "formality_base": 6
+  },
+  
+  "humorous": {
+    "contractions": true,
+    "contraction_rate": 0.8,
+    "sentence_variety": true,
+    "casual_transitions": true,
+    "rhetorical_questions": true,
+    "personality_words": [
+      "honestly",
+      "literally",
+      "seriously",
+      "basically",
+      "totally",
+      "absolutely",
+      "ridiculously"
+    ],
+    "opening_phrases": [
+      "Okay, so",
+      "Here's the funny thing:",
+      "You won't believe this:",
+      "Plot twist:",
+      "Spoiler alert:",
+      "Fun fact:"
+    ],
+    "transition_style": "playful",
+    "preferred_transitions": {
+      "addition": ["And", "Plus", "Oh, and", "Also"],
+      "contrast": ["But", "Plot twist:", "However", "Ironically"],
+      "cause": ["So", "That's why", "Naturally"],
+      "example": ["Like", "Say", "Picture this", "For instance"]
+    },
+    "allow_exaggeration": true,
+    "playful_tone": true,
+    "formality_base": 2
+  }
+}

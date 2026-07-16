@@ -1,0 +1,8 @@
+name: local-opportunity
+description: "Local market opportunity scanner. Input a city, category, and keyword to identify whether the market replicates the NOLA Pattern — weak competition ranking #1 with basic on-page SEO and no backlinks. Scores top 10 SERP competitors on 10 weakness signals and outputs an Opportunity Score with an actionable entry plan."
+user-invokable: true
+argument-hint: "<city> <category> <keyword>"
+license: MIT
+version: "1.0.0"
+category: seo
+author: custom

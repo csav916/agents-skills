@@ -1,0 +1,37 @@
+{
+    "page_title": "Boost Your Conversions | LandingPagePro",
+    "brand_name": "LandingPagePro",
+    "hero_headline": "Stop Guessing. Start Converting.",
+    "hero_subheadline": "The only landing page builder designed around human physiology and conversion data. Build pages that people actually want to buy from.",
+    "primary_cta_text": "Start My Free Trial",
+    "social_proof_snippet": "Join 15,000+ marketers already scaling with us.",
+    "hero_image_url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    "benefits": [
+        {
+            "title": "Physiological Triggers",
+            "description": "We use eye-tracking data to place your CTA exactly where the human eye naturally lands."
+        },
+        {
+            "title": "AEO Optimized",
+            "description": "Our pages are structured to be the top answer for AI-driven search engines like Google Gemini."
+        },
+        {
+            "title": "Frictionless UX",
+            "description": "Remove the barriers between your product and your customer with our simplified lead forms."
+        }
+    ],
+    "testimonials": [
+        {
+            "quote": "Our conversion rate jumped from 4% to 12% in the first week. The difference is night and day.",
+            "author": "Sarah Jenkins",
+            "role": "CMO at TechFlow"
+        },
+        {
+            "quote": "The focus on psychological triggers really works. Our ads are finally profitable.",
+            "author": "Mark Thompson",
+            "role": "Founder of GrowthScale"
+        }
+    ],
+    "final_cta_headline": "Ready to transform your business?",
+    "final_cta_subheadline": "Get instant access to our high-converting templates and start seeing results today."
+}
