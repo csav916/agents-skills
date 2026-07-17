@@ -3,9 +3,11 @@ name: blog-writer
 description: >
   Full-pipeline blog article generator. Takes a search question and primary keyword,
   runs keyword research, deep topic research, writes a complete SEO-optimized blog post,
-  then runs content quality, search experience, and AI visibility checks before
-  delivering the finished article. Use when user says "write a blog", "blog article",
-  "write me a post", "blog post about", or invokes /blog-writer.
+  runs content quality, search experience, and AI visibility checks, then hands the
+  draft to the blog-editor skill for a final pass that cuts length and formulaic
+  structure so the result reads like it was written by a person. Use when user says
+  "write a blog", "blog article", "write me a post", "blog post about", or invokes
+  /blog-writer.
 user-invokable: true
 argument-hint: "<search question> | <primary keyword>"
 license: MIT
@@ -149,21 +151,28 @@ Verify:
 
 ---
 
-## Phase 6 — Humanize & Polish
+## Phase 6 — Editorial Refinement (invoke blog-editor)
 
-Apply these final passes:
+The Phase 5 draft is SEO-solid but reliably runs long and formulaic — that's expected
+at this stage, it's what Phase 6 exists to fix. Invoke the `blog-editor` skill on the
+full Phase 5 draft (article + SEO metadata + sources) to:
 
-- Remove any robotic or generic phrasing ("In today's fast-paced world...", "It's important to note that...")
-- Add at least one specific, concrete example or scenario
-- Make the introduction feel like it was written by someone who understands the reader's frustration
-- Ensure the conclusion has a clear, specific call to action (not just "contact us")
-- Check that transitions between sections flow naturally
+- Cut the draft by roughly 30%, removing padding and redundant sections
+- Break the rigid H2/H3/FAQ template feel and vary structure/section openings
+- Replace flat or corporate phrasing with a natural, human voice
+- Recheck SEO/AEO/GEO integrity after cutting (keyword placement, FAQ block,
+  heading hierarchy, strongest citations, answer-first intro) and restore anything
+  a cut broke
+
+Use blog-editor's output — the edited article plus its BEFORE → AFTER summary and
+integrity check — as the basis for Phase 7. Don't perform a separate manual polish
+pass here; that's blog-editor's job.
 
 ---
 
 ## Phase 7 — Final Output
 
-Deliver the finished article in this exact format:
+Deliver the finished, edited article in this exact format:
 
 ---
 
@@ -177,11 +186,11 @@ Title: [H1 title]
 Meta Description: [150-160 chars]
 Primary Keyword: [keyword]
 Target URL Slug: /[suggested-slug]
-Word Count: [count]
+Word Count: [final word count]  (drafted at [pre-edit count], edited -[X]%)
 
 ---
 
-[FULL ARTICLE — formatted in Markdown, ready to paste into WordPress/CMS]
+[FULL EDITED ARTICLE — formatted in Markdown, ready to paste into WordPress/CMS]
 
 ---
 
@@ -191,6 +200,10 @@ Content Quality:     [score]/100
 SEO Optimization:    [score]/100
 AI Search Ready:     [score]/100
 Readability Grade:   [grade level]
+
+EDITORIAL SUMMARY (from blog-editor)
+-------------------------------------
+[WHAT CHANGED bullets from blog-editor's output]
 
 SOURCES USED
 ------------
