@@ -26,7 +26,7 @@ The official template **"Google Maps Local Lead Finder"** (`workflow_template_id
 
 **Parameter gotcha:** this template's `GoogleMap_Search` input is NOT a keyword — passing something like `"handyman"` fails with "Invalid URL or domain". It expects the literal Google Maps search URL (base `https://www.google.com/maps/search/` plus the URL-encoded query/location). If parameters ever look wrong, pull the template's raw node config from its public detail page rather than guessing.
 
-**Website detection:** this template doesn't emit a clean boolean — a business with no site shows up with its `Url` field pointing back to the Google Maps place link (`https://www.google.com/maps/place/...`) instead of a real external domain. Filter on that pattern. Also strip literal `"undefined"` / `"N/A"` / `"NoReview"` artifact strings the extractor sometimes leaves in fields.
+**Website detection:** this template doesn't emit a clean boolean — a business with no site shows up with its `Url` field pointing back to the Google Maps place link (`https://www.google.com/maps/place/...`) instead of a real external domain. Filter on that pattern. This `Url`/Maps-place-link field is used internally for detection and deduplication only — do not include it in the final CSV (see Output). Also strip literal `"undefined"` / `"N/A"` / `"NoReview"` artifact strings the extractor sometimes leaves in fields.
 
 **Data gap:** this template does not return a numeric review count, only an aggregate rating. Leave that column blank rather than fabricating a number, and flag the gap in your final report.
 
@@ -50,7 +50,9 @@ If the requested area is a region rather than a single city (e.g. "Southern Oreg
 
 ## Output
 
-Produce a deduplicated list with, at minimum: business name, phone, address, city, rating, and Maps listing URL (add review count only if the template/method used actually provides it). Write the CSV to `C:\Users\csav7\Downloads\` (always this folder, not the working directory or home directory) and summarize the count, a per-city/area breakdown, and a few example rows in your reply. Flag anomalies explicitly — category drift from what was asked for, listings whose coordinates don't match the claimed city, garbled data — rather than silently including or dropping them.
+Produce a deduplicated list with, at minimum: business name, phone, address, city, and rating (add review count only if the template/method used actually provides it). Do NOT include the Google Maps listing URL as a column — the user doesn't want it in their sheet; use it internally for dedup/detection only, then drop it before writing the CSV. Write the CSV to `C:\Users\csav7\Downloads\` (always this folder, not the working directory or home directory) and summarize the count, a per-city/area breakdown, and a few example rows in your reply. Flag anomalies explicitly — category drift from what was asked for, listings whose coordinates don't match the claimed city, garbled data — rather than silently including or dropping them.
+
+Note: this agent does not research owner names or emails. For that, hand the output CSV to the `lead-researcher` agent.
 
 ## Cost awareness
 
